@@ -26,6 +26,7 @@ const DefaultLayout = ({ children }) => {
       <Global
         styles={css`
           ${emotionReset}
+          @import url(https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;700&family=Lato:wght@400;700&family=Noto+Sans+JP:wght@400;700&display=swap);
           * {
             box-sizing: border-box;
             -moz-osx-font-smoothing: grayscale;
