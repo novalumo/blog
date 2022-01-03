@@ -9,13 +9,15 @@ const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: start;
-  align-items: center;
-  margin: 5rem 0 0 0;
+  align-items: start;
+  margin: 5rem auto 0 auto;
+  padding: 0 1rem 0 1rem;
   min-height: 80vh;
+  max-width: 780px;
 
-  @media screen and (max-width: 640px) {
+  /* @media screen and (max-width: 640px) {
     margin: 5rem 1rem 0 1rem;
-  }
+  } */
 `;
 
 const DefaultLayout = ({ children }) => {
@@ -41,9 +43,7 @@ const DefaultLayout = ({ children }) => {
         `}
       />
       <Header />
-      <Wrapper>
-        <main>{children}</main>
-      </Wrapper>
+      <Wrapper>{children}</Wrapper>
       <Footer />
     </>
   );

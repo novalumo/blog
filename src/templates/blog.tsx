@@ -6,6 +6,7 @@ import SEO from "../components/seo";
 import Recommend from "../components/recommend";
 
 const Article = styled.article`
+  width: 100%;
   h1 {
     margin: 1rem 0 1rem 0;
     font-size: 2.5rem;
@@ -52,13 +53,8 @@ const PublishDate = styled.p`
   color: #555;
 `;
 
-const HeaderDiv = styled.hr`
-  border: solid 1px #ccc;
-  margin: 1rem 0 1rem 0;
-`;
-
 const ContentBody = styled.div`
-  margin: 1rem 0 1rem 0;
+  margin: 2rem 0 1rem 0;
   width: 100%;
   max-width: 720px;
   box-sizing: border-box;
@@ -131,7 +127,7 @@ export default ({ data }) => {
   const post = data.allWpPost.edges[0].node;
   return (
     <>
-      <SEO title={post.title}></SEO>
+      <SEO title={post.title} description={post.excerpt}></SEO>
       <DefaultLayout>
         <Article>
           {post.categories.nodes.map((category) => {
@@ -146,7 +142,6 @@ export default ({ data }) => {
           <PublishDate>
             {`${getEnglishMonth(post.month)} ${post.day}, ${post.year}`}
           </PublishDate>
-          <HeaderDiv />
           <ContentBody dangerouslySetInnerHTML={{ __html: post.content }} />
           <section className="tags">
             {post.tags.nodes.map((tag) => {
@@ -172,6 +167,7 @@ export const query = graphql`
           id
           title
           content
+          excerpt
           slug
           year: date(formatString: "YYYY")
           month: date(formatString: "M")

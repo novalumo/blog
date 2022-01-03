@@ -47,13 +47,34 @@ const Header = () => {
         </Link>
         <ul>
           <li>
-            <Link to="/">Latest</Link>
+            <Link
+              to="/"
+              onClick={() => {
+                alert("実装中です");
+              }}
+            >
+              Author
+            </Link>
           </li>
           <li>
-            <Link to="/">Categories</Link>
+            <Link
+              to="/"
+              onClick={() => {
+                alert("実装中です");
+              }}
+            >
+              Categories
+            </Link>
           </li>
           <li>
-            <Link to="/">Tags</Link>
+            <Link
+              to="/"
+              onClick={() => {
+                alert("実装中です");
+              }}
+            >
+              Tags
+            </Link>
           </li>
         </ul>
       </HeaderComponent>
