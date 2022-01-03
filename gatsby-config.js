@@ -1,22 +1,26 @@
 module.exports = {
   siteMetadata: {
-    siteUrl: "https://www.yourdomain.tld",
-    title: "blog",
+    siteUrl: "https://blog.novaalumo.llc",
+    title: "Novalumo Blog",
+    description: "Novalumo合同会社のブログ",
+    social: {
+      twitter: "novalumo",
+    },
   },
   plugins: [
     {
       resolve: "gatsby-source-wordpress",
       options: {
-        url: "",
+        url: "http://localhost:8888/wordpress/graphql",
       },
     },
     "gatsby-plugin-emotion",
-    {
-      resolve: "gatsby-plugin-google-analytics",
-      options: {
-        trackingId: "",
-      },
-    },
+    // {
+    //   resolve: "gatsby-plugin-google-analytics",
+    //   options: {
+    //     trackingId: "",
+    //   },
+    // },
     "gatsby-plugin-image",
     "gatsby-plugin-react-helmet",
     "gatsby-plugin-sitemap",
