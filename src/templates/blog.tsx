@@ -63,6 +63,7 @@ const ContentBody = styled.div`
   h4,
   h5,
   h6 {
+    font-weight: bold;
     line-height: 1.25;
     margin: 0 0 1rem 0;
   }

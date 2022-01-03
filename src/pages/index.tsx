@@ -28,7 +28,6 @@ const Article = styled.article`
 
   div {
     width: 50%;
-
     img {
       width: 100%;
       padding: 0 1rem 0 0;
@@ -61,10 +60,13 @@ const DateAuthor = styled.p`
   margin: 0 0 0.75rem 0;
 `;
 
-const Excerpt = styled.p`
-  color: #777;
-  line-height: 1.25;
-  margin: 0;
+const Excerpt = styled.div`
+  width: 100% !important;
+  p {
+    color: #777;
+    line-height: 1.25;
+    margin: 0;
+  }
 `;
 
 const Heading = styled.div`
