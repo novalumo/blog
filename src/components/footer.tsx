@@ -30,7 +30,9 @@ const Footer = () => {
     <>
       <FooterComponent>
         <small>
-          <a href="#">Corporate Website</a>
+          <a href="#" target="_blank" rel="noreferrer noopener">
+            Corporate Website
+          </a>
         </small>
         <small>&copy; 2022 Novalumo Japan G.K.</small>
       </FooterComponent>

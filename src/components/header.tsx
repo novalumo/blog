@@ -63,7 +63,7 @@ const Header = () => {
                 alert("実装中です");
               }}
             >
-              Categories
+              Category
             </Link>
           </li>
           <li>
@@ -73,7 +73,7 @@ const Header = () => {
                 alert("実装中です");
               }}
             >
-              Tags
+              Tag
             </Link>
           </li>
         </ul>
