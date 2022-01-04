@@ -3,6 +3,7 @@ import { graphql, Link } from "gatsby";
 import DefaultLayout from "../layouts/default";
 import styled from "@emotion/styled";
 import SEO from "../components/seo";
+import Common from "../functions/common";
 
 const List = styled.li`
   a {
@@ -82,23 +83,7 @@ const Heading = styled.div`
   }
 `;
 
-const getEnglishMonth = (month) => {
-  const monthNames = [
-    "Jan",
-    "Feb",
-    "Mar",
-    "Apr",
-    "May",
-    "Jun",
-    "Jul",
-    "Aug",
-    "Sep",
-    "Oct",
-    "Nov",
-    "Dec",
-  ];
-  return monthNames[month - 1];
-};
+const getEnglishMonth = new Common().getEnglishMonth;
 
 const IndexPage = ({ data }) => {
   const articles = data.allWpPost.edges;

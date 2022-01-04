@@ -4,6 +4,7 @@ import { graphql } from "gatsby";
 import styled from "@emotion/styled";
 import SEO from "../components/seo";
 import Recommend from "../components/recommend";
+import Common from "../functions/common";
 
 const Article = styled.article`
   width: 100%;
@@ -106,23 +107,7 @@ const ContentBody = styled.div`
   }
 `;
 
-const getEnglishMonth = (month) => {
-  const monthNames = [
-    "Jan",
-    "Feb",
-    "Mar",
-    "Apr",
-    "May",
-    "Jun",
-    "Jul",
-    "Aug",
-    "Sep",
-    "Oct",
-    "Nov",
-    "Dec",
-  ];
-  return monthNames[month - 1];
-};
+const getEnglishMonth = new Common().getEnglishMonth;
 
 export default ({ data }) => {
   const post = data.allWpPost.edges[0].node;
